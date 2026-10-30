@@ -1,0 +1,20 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Large files excluded from GitHub
+ML/Price Prediction and Market Segmentation/diamond_price_model.pkl
+ML/Shopper Spectrum/similarity_df.pkl
+NLP/Fake news prediction/Fake.csv
+NLP/Fake news prediction/True.csv
