@@ -30,9 +30,19 @@ def load_models():
     logistic_model = joblib.load("logistic_model.pkl")
     tfidf = joblib.load("tfidf_vectorizer.pkl")
 
-    rnn_model = load_model("fake_news_rnn.keras")
-    lstm_model = load_model("fake_news_lstm.keras")
+    # Load RNN model
+    rnn_model = load_model(
+        "fake_news_rnn.keras",
+        compile=False
+    )
 
+    # Load LSTM model
+    lstm_model = load_model(
+        "fake_news_lstm.keras",
+        compile=False
+    )
+
+    # Load tokenizer
     with open("tokenizer.pkl", "rb") as file:
         tokenizer = pickle.load(file)
 
