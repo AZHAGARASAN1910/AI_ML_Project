@@ -2,6 +2,8 @@ import streamlit as st
 import pickle
 import string
 import nltk
+import pickle
+from pathlib import Path
 
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
@@ -65,6 +67,13 @@ def transform_text(text):
 vectorizer_path = r"C:\Users\Ezhilarasi\OneDrive\Desktop\NLP PROJECT\New folder\vectorizer.pkl"
 
 model_path = r"C:\Users\Ezhilarasi\OneDrive\Desktop\NLP PROJECT\New folder\model.pkl"
+
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
+vectorizer_path = BASE_DIR / "vectorizer.pkl"
+model_path = BASE_DIR / "model.pkl"
 
 
 with open(vectorizer_path, "rb") as file:
